@@ -10,3 +10,123 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.title {
+    font-family: 'Salsa', cursive;
+    padding: 20px;
+    text-shadow: 2px 2px 2px grey;
+}
+
+.note-style {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 1000px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    border-top: 1px solid #ddd;
+    width: 1000px;
+    padding: 10px;
+    margin: -10px;
+    margin-top: -20px;
+    padding-right: 850px;
+    color: grey;
+}
+
+/* estilo del boton eliminar */
+.task-item {
+    padding: 30px;
+    padding-left: 30px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    margin: -10px;  
+}
+
+.list-unstyled {
+    width: 100%;
+}
+
+.task-item Button {
+    display: none;
+}
+
+.task-item:hover Button {
+    display: block;
+    border: none;
+    font-size: 18px;
+    color: lightcoral;
+}
+
+.task-item:active Button {
+    font-size: 18px;
+    color: red !important;
+}
+
+
+.task-item Button:focus {
+    outline: none;
+}
+
+/* hojas amontonadas */
+.note-style::before {
+    content: '';
+    position: absolute;
+    bottom: -16px; 
+    transform: translateX(-50%); 
+    width: 977px; 
+    height: 10px; 
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    transform: rotate(-0deg); 
+    z-index: -1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-style::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 987px;
+    height: 10px;
+    border-bottom: none;
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    z-index: -1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* quitar el estilo del input */
+.input-style {
+    border: none;
+    padding: 20px;
+}
+
+.input-style .form-control,
+.input-style .btn {
+    border: none;
+}
+
+/* quitar el borde azul del focus */
+.input-style .form-control:focus,
+.input-style .btn:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/* style del texto predeterminado */
+.default-style {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
